@@ -12,7 +12,7 @@ const Plans = () => {
   //getallplans
   const getAllPlans = async () => {
     try {
-      const { data } = await axios.get("https://ecommerce-rm2m.onrender.com/api/v1/plan/get-plan");
+      const { data } = await axios.get("/api/v1/plan/get-plan");
       setPlan(data.plan);
     } catch (error) {
       console.log(error);
@@ -42,7 +42,7 @@ const Plans = () => {
               >
                 <div>
                 <img
-                        src={`https://ecommerce-rm2m.onrender.com/api/v1/plan/plan-sampleimage/${p._id}`}
+                        src={`/api/v1/plan/plan-sampleimage/${p._id}`}
                         alt={p.name}
                         className=" p-1 rounded-0 img-fluid"
                         style={{ width: "22rem", height: "17rem" }}

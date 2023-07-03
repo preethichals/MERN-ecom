@@ -18,7 +18,7 @@ function CreateCategory() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("https://ecommerce-rm2m.onrender.com/api/v1/category/create-category", {
+      const { data } = await axios.post("/api/v1/category/create-category", {
         name,
       });
       if (data?.success) {
@@ -36,7 +36,7 @@ function CreateCategory() {
   //Get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://ecommerce-rm2m.onrender.com/api/v1/category/get-category");
+      const { data } = await axios.get("/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -55,7 +55,7 @@ function CreateCategory() {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `https://ecommerce-rm2m.onrender.com/api/v1/category/update-category/${selected._id}`,
+        `/api/v1/category/update-category/${selected._id}`,
         { name: updatedName }
       );
       if (data.success) {
@@ -76,7 +76,7 @@ function CreateCategory() {
   const handleDeleted = async (pid) => {
     try {
       const { data } = await axios.delete(
-        `https://ecommerce-rm2m.onrender.com/api/v1/category/delete-category/${pid}`,
+        `/api/v1/category/delete-category/${pid}`,
         { name: updatedName }
       );
       if (data.success) {

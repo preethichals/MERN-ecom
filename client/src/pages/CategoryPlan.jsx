@@ -53,7 +53,7 @@ function CategoryPlan() {
                   style={{ width: "14rem", height: "auto" }}
                 >
                   <img
-                    src={`https://ecommerce-rm2m.onrender.com/api/v1/plan/plan-sampleimage/${p._id}`}
+                    src={`/api/v1/plan/plan-sampleimage/${p._id}`}
                     alt={p.name}
                     className="border-1 p-2 rounded-0 img-fluid"
                     style={{ width: "14rem", height: "10rem" }}
