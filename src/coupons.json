@@ -1,0 +1,42 @@
+[
+    {
+        "id":101,
+        "title":"Summer Sales",
+        "coupon":"20% OFF",
+        "img":"mens-watch.jpg",
+        "desc":"Lorem ipsum dolor sit amet, et nam pertinax gloriatur. Sea te minim soleat senserit.",
+        "code":"SUMMER035",
+        "expire":"Expires: Jun 03, 2023"
+    },
+    {   
+        "id":102,
+        "title":"Watch Sale",
+        "coupon":"10% OFF ON WATCH",
+        "img":"mens-watch.jpg",
+        "desc":"Lorem ipsum dolor sit amet, et nam pertinax gloriatur. Sea te minim soleat senserit.",
+        "code":"WACTH10",
+        "expire":"Expires: Aug 1, 2023"
+        
+    },
+    {
+
+        "id":103,
+        "title":"Special Offer",
+        "coupon":"On PURCHASE Above Rs.3000",
+        "img":"mens-watch.jpg",
+        "desc":"Lorem ipsum dolor sit amet, et nam pertinax gloriatur. Sea te minim soleat senserit.",
+        "code":"SPL345B",
+        "expire":"Expires: July 20, 2023"
+    },
+    {
+        
+        "id":104,
+        "title":"Summer Sales",
+        "coupon":"20% OFF YOUR PURCHASE",
+        "img":"mens-watch.jpg",
+        "desc":"Lorem ipsum dolor sit amet, et nam pertinax gloriatur. Sea te minim soleat senserit.",
+        "code":"CHE078",
+        "expire":"Expires: Jun 30, 2023"      
+    }
+   
+]

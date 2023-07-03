@@ -1,13 +1,147 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Overlock+SC&family=Poppins:wght@100;200;400;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap');
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+a:link {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a:visited,a:active {
+  color: #222222;
+  font-weight: 700;
+  text-decoration:underline;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+/* Product title color */
+.color1{
+  color: #232121;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav:link :hover {
+  font-family: "Poppins", sans-serif;
+  line-height: 17px;
+  color: rgb(18, 18, 18);
+  text-decoration: underline;
+  cursor: pointer;
+}
+nav:visited {
+  font-family: "Poppins", sans-serif;
+  line-height: 17px;
+  color: rgb(16, 15, 15);
+  text-decoration: none;
+}
+
+nav a:active {
+  color:#232121 ;
+  font-weight: 500;
+  text-decoration: underline;
+}
+nav a:hover {
+  text-decoration:underline; 
+  color: #000000;
+}
+.logo-cursive {
+  font-family: 'Corinthia', cursive;
+  text-shadow: 1px 2px 1px #bfaeae;
+}
+.cursive-heading {
+  font-family: 'Corinthia', cursive;
+  text-shadow: 1px 1px 1px #bf6a6a
+}
+.cursive {
+  font-family: 'Corinthia', cursive;
+}
+
+.navbar {
+  font-family: "Poppins", sans-serif;
+  line-height: 17px;
+  border-bottom: 0.1rem solid rgb(201, 201, 201);
+}
+
+.nav-link {
+  font-weight: 500 !important;
+  
+}
+
+.bg-hero-banner {
+  background-image: url("./Images/sale_banner.jpg");
+  height: 65vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sec-heading  {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2rem;
+}
+.bg-womens-sec {
+  background-image: url("./Images/pink-geometrical-background.jpg");
+  height:auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-mens-sec {
+  background-image: url("./Images/abstract-paper-is-colorful-background_6529-809.jpg");
+  height:auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-kids-sec {
+  background-image: url("./Images/yellow-flower-white-background_894754-538.jpg");
+  height:auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-sale {
+  background-image: url("./Images/Hero-banner.jpg");
+  height: 65vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-register {
+  background-image: url("./Images/bg-register.jpg");
+  height: 85vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-login {
+  background-image: url("./Images/bg-login.jpg");
+  height: 85vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.heading{
+  text-transform: uppercase;
+  margin:1rem auto 0 auto;
+  padding: 0.4rem;
+  letter-spacing: 0.2rem;
+  background-color:#343030;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: #fff;
+  width: 70%;
+}
+.heading:hover{
+  background-color:transparent;
+  border-radius: 0.5rem;
+  color: #343030;
 }
