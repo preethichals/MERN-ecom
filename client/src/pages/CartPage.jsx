@@ -47,7 +47,7 @@ import { useAuth } from "../context/auth";
                  <div className="row card flex-row" key={index}>
                    <div className="col-md-5">
                    <img
-                          src={`/api/v1/plan/plan-sampleimage/${p._id}`}
+                          src={`http://localhost:8080/api/v1/plan/plan-sampleimage/${p._id}`}
                           alt={p.name}
                           className="p-3 rounded-0 img-fluid "
                           style={{ width: "30rem", height: "25rem" }}

@@ -26,7 +26,7 @@ function Mplan() {
   const getAllPlans = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`/api/v1/plan/plan-list/${page}`);
+      const { data } = await axios.get(`http://localhost:8080/api/v1/plan/plan-list/${page}`);
       setPlan(data.plan);
       setLoading(false);
     } catch (error) {
@@ -38,7 +38,7 @@ function Mplan() {
   //Get total count
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("/api/v1/plan/plan-count");
+      const { data } = await axios.get("http://localhost:8080/api/v1/plan/plan-count");
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -56,7 +56,7 @@ function Mplan() {
   const loadmore = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`/api/v1/plan/plan-list/${page}`);
+      const { data } = await axios.get(`http://localhost:8080/api/v1/plan/plan-list/${page}`);
       setLoading(false);
       setPlan([...plan, ...data?.plan]);
     } catch (error) {
@@ -79,7 +79,7 @@ function Mplan() {
   //Get Filter meal plans
   const filterPlan = async () => {
     try {
-      const { data } = await axios.post("/api/v1/plan/plan-filter", {
+      const { data } = await axios.post("http://localhost:8080/api/v1/plan/plan-filter", {
         checked,
       });
       setPlan(data?.plan);
@@ -97,7 +97,7 @@ function Mplan() {
   //Get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-category");
+      const { data } = await axios.get("http://localhost:8080/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -227,7 +227,7 @@ function Mplan() {
                     >
                       
                       <img
-                        src={`/api/v1/plan/plan-sampleimage/${p._id}`}
+                        src={`http://localhost:8080/api/v1/plan/plan-sampleimage/${p._id}`}
                         alt={p.name}
                         className=" p-1 rounded-0 img-fluid"
                         style={{ width: "15rem", height: "17rem" }}

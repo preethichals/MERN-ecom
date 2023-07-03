@@ -30,7 +30,7 @@ app.use('/api/v1/plan',planRoutes)
 //rest api
 app.get('/',(req,res) => {
     res.send({
-        message:'Welcome'// (<h3>Welcome to mp app</h3>)
+        message:'Welcome'
     })
 })
 

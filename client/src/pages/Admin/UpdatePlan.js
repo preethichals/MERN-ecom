@@ -25,7 +25,7 @@ function UpdatePlan() {
   //Get Single Plan
   const getSinglePlan = async () => {
     try {
-      const { data } = await axios.get(`/api/v1/plan/get-plan/${params.slug}`);
+      const { data } = await axios.get(`http://localhost:8080/api/v1/plan/get-plan/${params.slug}`);
       setName(data.plan.name);
       setId(data.plan._id);
       setDescription(data.plan.description);
@@ -43,7 +43,7 @@ function UpdatePlan() {
   //Get all Category
   const getAllPlan = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-category");
+      const { data } = await axios.get("http://localhost:8080/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -69,7 +69,7 @@ function UpdatePlan() {
       planData.append("quantity", quantity);
       sampleimage && planData.append("sampleimage", sampleimage);
       planData.append("category", category);
-      const { data } = axios.put(`/api/v1/plan/update-plan/${id}`, planData);
+      const { data } = axios.put(`http://localhost:8080/api/v1/plan/update-plan/${id}`, planData);
       if (data?.success) {
         toast.error(data?.message);
       } else {
@@ -87,7 +87,7 @@ function UpdatePlan() {
     try {
       let answer = window.confirm("You want to delete? Type yes or cancel ");
       if (answer) {
-        const { data } = await axios.delete(`/api/v1/plan/delete-plan/${id}`);
+        const { data } = await axios.delete(`http://localhost:8080/api/v1/plan/delete-plan/${id}`);
         toast.success("Plan deleted Successfully");
         navigate("/dashboard/admin/plan");
         toast.success(data?.message)
@@ -149,7 +149,7 @@ function UpdatePlan() {
                 ) : (
                   <div className=" text-center">
                     <img
-                      src={`/api/v1/plan/plan-sampleimage/${params.slug}`}
+                      src={`http://localhost:8080/api/v1/plan/plan-sampleimage/${params.slug}`}
                       alt="product-sampleImage"
                       height={"2rem"}
                       className="img img-fluid"
