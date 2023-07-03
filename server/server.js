@@ -35,7 +35,7 @@ app.get('/',(req,res) => {
 })
 
 //Port
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT
 
 //run listen
 app.listen(PORT,() => {
