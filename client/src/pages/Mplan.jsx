@@ -26,7 +26,7 @@ function Mplan() {
   const getAllPlans = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`http://localhost:8080/api/v1/plan/plan-list/${page}`);
+      const { data } = await axios.get(`https://ecomm-d72q.onrender.com/api/v1/plan/plan-list/${page}`);
       setPlan(data.plan);
       setLoading(false);
     } catch (error) {
@@ -38,7 +38,7 @@ function Mplan() {
   //Get total count
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/v1/plan/plan-count");
+      const { data } = await axios.get("https://ecomm-d72q.onrender.com/api/v1/plan/plan-count");
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -56,7 +56,7 @@ function Mplan() {
   const loadmore = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`http://localhost:8080/api/v1/plan/plan-list/${page}`);
+      const { data } = await axios.get(`https://ecomm-d72q.onrender.com/api/v1/plan/plan-list/${page}`);
       setLoading(false);
       setPlan([...plan, ...data?.plan]);
     } catch (error) {
@@ -79,7 +79,7 @@ function Mplan() {
   //Get Filter meal plans
   const filterPlan = async () => {
     try {
-      const { data } = await axios.post("http://localhost:8080/api/v1/plan/plan-filter", {
+      const { data } = await axios.post("https://ecomm-d72q.onrender.com/api/v1/plan/plan-filter", {
         checked,
       });
       setPlan(data?.plan);
@@ -97,7 +97,7 @@ function Mplan() {
   //Get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/v1/category/get-category");
+      const { data } = await axios.get("https://ecomm-d72q.onrender.com/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -126,39 +126,7 @@ function Mplan() {
           <div className=" container-fluid ">
             <div className="bg-sale row">
              
-              {/* <div
-                className=" container mt-5 col-md-6 text-center"
-                style={{ backgroundColor: "transparent" }}
-              >
-                <p className="font-weight-bolder lh-base text-uppercase ">
-                  <span
-                    className=" fs-1"
-                    style={{ letterSpacing: "0.2em", color: "#41025f" }}
-                  >
-                    New Arrival
-                  </span>
-                  <br />
-                  <span className="fs-5" style={{ color: "#3e4444" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </span>
-                </p>
-                <h5 className="fs-5 lh-base" style={{ color: "#696969" }}>
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam
-                </h5>
 
-                <button
-                  className="btn btn-md text-white text-uppercase"
-                  style={{
-                    backgroundColor: "#46866c",
-                    letterSpacing: "0.2em",
-                  }}
-                >
-                  
-                 <Link to={'/coupon'}> Coupons</Link> 
-                </button>
-              </div>
-              <div className="col-md-6"></div> */}
             </div>
               {/* Breadcrumb */}
         <nav aria-label="breadcrumb" className="m-3">
@@ -227,7 +195,7 @@ function Mplan() {
                     >
                       
                       <img
-                        src={`http://localhost:8080/api/v1/plan/plan-sampleimage/${p._id}`}
+                        src={`https://ecomm-d72q.onrender.com/api/v1/plan/plan-sampleimage/${p._id}`}
                         alt={p.name}
                         className=" p-1 rounded-0 img-fluid"
                         style={{ width: "15rem", height: "17rem" }}

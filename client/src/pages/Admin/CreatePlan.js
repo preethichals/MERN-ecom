@@ -23,7 +23,7 @@ function CreatePlan() {
   //Get all Category
   const getAllPlan = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/v1/category/get-category");
+      const { data } = await axios.get("https://ecomm-d72q.onrender.com/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -49,7 +49,7 @@ function CreatePlan() {
       planData.append("quantity", quantity);
       planData.append("sampleimage", sampleimage);
       planData.append("category", category);
-      const { data } = axios.post("http://localhost:8080/api/v1/plan/create-plan", planData);
+      const { data } = axios.post("https://ecomm-d72q.onrender.com/api/v1/plan/create-plan", planData);
       if (data?.success) {
         toast.success("Plan Created successfully"); 
       } else {

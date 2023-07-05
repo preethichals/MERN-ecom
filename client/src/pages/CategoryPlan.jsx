@@ -14,7 +14,7 @@ function CategoryPlan() {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/plan/plan-category/${params.slug}`
+        `https://ecomm-d72q.onrender.com/api/v1/plan/plan-category/${params.slug}`
       );
       setCategory(data?.category);
       setPlan(data?.plans);
@@ -53,7 +53,7 @@ function CategoryPlan() {
                   style={{ width: "14rem", height: "auto" }}
                 >
                   <img
-                    src={`http://localhost:8080/api/v1/plan/plan-sampleimage/${p._id}`}
+                    src={`https://ecomm-d72q.onrender.com/api/v1/plan/plan-sampleimage/${p._id}`}
                     alt={p.name}
                     className="border-1 p-2 rounded-0 img-fluid"
                     style={{ width: "14rem", height: "10rem" }}
