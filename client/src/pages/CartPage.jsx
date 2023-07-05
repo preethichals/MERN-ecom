@@ -47,7 +47,7 @@ const CartPage = () => {
   const getToken = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/plan/braintree/token"
+        "https://ecomm-d72q.onrender.com/api/v1/plan/braintree/token"
       );
       setClientToken(data?.clientToken);
     } catch (error) {
@@ -65,7 +65,7 @@ const CartPage = () => {
       const { nonce } = await instance.requestPaymentMethod();
       // eslint-disable-next-line
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/plan/braintree/payment",
+        "https://ecomm-d72q.onrender.com/api/v1/plan/braintree/payment",
         {
           nonce,
           cart,
