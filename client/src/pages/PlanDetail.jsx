@@ -12,12 +12,17 @@ import { GrCart } from "react-icons/gr";
 function PlanDetail() {
    const similarProd = [{
     "name":" Beigh Top",
-
     "description":"Description about the product",
+    "img":"bright-positive.jpg",
    },{
     "name":"Pink Top",
     "description":"Description about the product",
-   }]
+    "img":"kids.jpg",
+   },
+   {
+    "img":"mens-tshirt-01.jpg"
+   }
+  ]
     const params = useParams()
     const navigate = useNavigate()
     const [cart,setCart] = useCart()
@@ -124,7 +129,7 @@ Machine Wash</p>
                 style={{ backgroundColor: "#999999", letterSpacing: "0.2em" }}
                 onClick={() => {
                   setCart([...cart,plan])
-                  toast.success('Plan added to Your List')
+                  toast.success('Product Added to Your Cart')
                 }}
               >
                 <GrCart /> Add to Cart
@@ -173,14 +178,14 @@ Machine Wash</p>
                         className=" text-capitalize fw-semibold px-2 pt-2"
                         style={{ letterSpacing: "0.2em", color: "#47856c" }}
                       >
-                        {p.name.substring(0,14)}
+                        {p.name}
                       </h6>
 
                       <h6
                         className=" fs-6 text-capitalize fw-medium px-2 py-1border-bottom border-1"
                         style={{ letterSpacing: "0.2em", color: "#47856c" }}
                       >
-                        {p.description.substring(0,34)}..
+                        {p.description}..
                       </h6>
                       
                       

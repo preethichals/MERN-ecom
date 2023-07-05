@@ -2,6 +2,8 @@ import express from "express";
 import formidable from "express-formidable";
 import { isAdmin, requireSignIn } from "../middleware/authMiddleware.js";
 import {
+  brainTreePaymentController,
+  braintreeTokenController,
   createPlanController,
   deletePlanController,
   getPlanController,
@@ -19,7 +21,7 @@ import {
 const router = express.Router();
 
 //routes
-// create plan
+// create product
 router.post(
   "/create-plan",
   requireSignIn,
@@ -28,16 +30,16 @@ router.post(
   createPlanController
 );
 
-//get all plan
+//get all product
 router.get("/get-plan", getPlanController);
 
-//single plan
+//single product
 router.get("/get-plan/:slug", getSinglePlanController);
 
 //get sample image
 router.get("/plan-sampleimage/:pid", planSampleImageController);
 
-//delete plan
+//delete product
 router.delete(
   "/delete-plan/:pid",
   requireSignIn,
@@ -45,7 +47,7 @@ router.delete(
   deletePlanController
 );
 
-// Update plan
+// Update product
 router.put(
   "/update-plan/:pid",
   requireSignIn,
@@ -54,13 +56,13 @@ router.put(
   updatePlanController
 );
 
-//Plan filter
+//Product filter
 router.post("/plan-filter", planFilterController);
 
-//Plan count
+//Product count
 router.get("/plan-count", planCountController);
 
-//Plan per page
+//Product per page
 router.get("/plan-list/:page", planPageListController);
 
 //Category wise Product list
@@ -71,5 +73,12 @@ router.get("/plan-filter", productFiltersController)
 
 //similar product
 router.post("/related-product/:pid/:cid", realtedProductController);
+
+//payment routes
+//token
+router.get("/braintree/token", braintreeTokenController);
+
+//payments
+router.post("/braintree/payment", requireSignIn, brainTreePaymentController);
 
 export default router;

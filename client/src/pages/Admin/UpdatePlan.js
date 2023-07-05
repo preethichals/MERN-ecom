@@ -25,7 +25,9 @@ function UpdatePlan() {
   //Get Single Plan
   const getSinglePlan = async () => {
     try {
-      const { data } = await axios.get(`https://ecomm-d72q.onrender.com/api/v1/plan/get-plan/${params.slug}`);
+      const { data } = await axios.get(
+        `https://ecomm-d72q.onrender.com/api/v1/plan/get-plan/${params.slug}`
+      );
       setName(data.plan.name);
       setId(data.plan._id);
       setDescription(data.plan.description);
@@ -43,7 +45,9 @@ function UpdatePlan() {
   //Get all Category
   const getAllPlan = async () => {
     try {
-      const { data } = await axios.get("https://ecomm-d72q.onrender.com/api/v1/category/get-category");
+      const { data } = await axios.get(
+        "https://ecomm-d72q.onrender.com/api/v1/category/get-category"
+      );
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -69,7 +73,10 @@ function UpdatePlan() {
       planData.append("quantity", quantity);
       sampleimage && planData.append("sampleimage", sampleimage);
       planData.append("category", category);
-      const { data } = axios.put(`https://ecomm-d72q.onrender.com/api/v1/plan/update-plan/${id}`, planData);
+      const { data } = axios.put(
+        `https://ecomm-d72q.onrender.com/api/v1/plan/update-plan/${id}`,
+        planData
+      );
       if (data?.success) {
         toast.error(data?.message);
       } else {
@@ -82,21 +89,23 @@ function UpdatePlan() {
     }
   };
 
-  //Delete Plan
+  //Delete Product
   const handleDeletePlan = async (e) => {
     try {
       let answer = window.confirm("You want to delete? Type yes or cancel ");
       if (answer) {
-        const { data } = await axios.delete(`https://ecomm-d72q.onrender.com/api/v1/plan/delete-plan/${id}`);
+        const { data } = await axios.delete(
+          `https://ecomm-d72q.onrender.com/api/v1/plan/delete-plan/${id}`
+        );
         toast.success("Plan deleted Successfully");
         navigate("/dashboard/admin/plan");
-        toast.success(data?.message)
+        toast.success(data?.message);
       }
     } catch (error) {
       console.log(error);
     }
   };
-  
+
   return (
     <Layout title={"create product"}>
       <div className=" container-fluid m-6 p-4">
@@ -118,7 +127,7 @@ function UpdatePlan() {
                 }}
                 value={category}
               >
-                {categories?.map((c,index) => (
+                {categories?.map((c, index) => (
                   <Option key={index} value={c._id}>
                     {c.name}
                   </Option>
@@ -149,7 +158,7 @@ function UpdatePlan() {
                 ) : (
                   <div className=" text-center">
                     <img
-                      src={`https://ecomm-d72q.onrender.com/api/v1/plan/plan-sampleimage/${params.slug}`}
+                      src={`https://ecomm-d72q.onrender.com/api/v1/plan/plan-sampleimage/${id}`}
                       alt="product-sampleImage"
                       height={"2rem"}
                       className="img img-fluid"
@@ -166,7 +175,7 @@ function UpdatePlan() {
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
-             
+
               <div className="mb-2">
                 <textarea
                   type="text"
@@ -200,13 +209,13 @@ function UpdatePlan() {
                   className="btn btn-primary text-center me-2"
                   onClick={handleUpdatePlan}
                 >
-                  Update Plan
+                  Update Product
                 </button>
                 <button
                   className="btn btn-danger text-center me-2"
                   onClick={handleDeletePlan}
                 >
-                  Delete Plan
+                  Delete Product
                 </button>
               </div>
             </div>

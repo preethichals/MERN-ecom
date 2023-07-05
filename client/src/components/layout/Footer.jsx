@@ -16,20 +16,22 @@ function Footer() {
           <h6 className="">ADDRESS :</h6>
           <h6 className=" fw-lighter"> 28 White tower, Street Name</h6>
           <h6 className=" fw-lighter">123 Street, City</h6>
-          <h6 className="">Email : <span className="fw-lighter">abcinfo@gamil.com</span></h6>
-         
-          <h6 className="">TELEPHONE : <span className=" fw-lighter">+912345678</span></h6>
+          <h6 className="">
+            Email : <span className="fw-lighter">abcinfo@gamil.com</span>
+          </h6>
 
-        
+          <h6 className="">
+            TELEPHONE : <span className=" fw-lighter">+912345678</span>
+          </h6>
         </div>
         <div
           className="col text-center m-auto border-start border-end border-light"
           style={{ letterSpacing: "0.2rem" }}
         >
           <h5 className="text-uppercase text-decoration-underline">Menu</h5>
-          <h6 className=" fw-lighter">Home</h6> 
+          <h6 className=" fw-lighter">Home</h6>
           <h6 className=" fw-lighter">Product</h6>
-          <h6 className=" fw-lighter">Blog</h6> 
+          <h6 className=" fw-lighter">Blog</h6>
           <h6 className=" fw-lighter">About</h6>
           <h6 className=" fw-lighter">Shipping</h6>
         </div>
@@ -37,10 +39,12 @@ function Footer() {
           className="col text-center m-auto border-end border-light"
           style={{ letterSpacing: "0.2rem" }}
         >
-          <h5 className="text-uppercase text-decoration-underline fw-semibold ">Account</h5>
+          <h5 className="text-uppercase text-decoration-underline fw-semibold ">
+            Account
+          </h5>
           <h6 className=" fw-lighter">Log-In</h6>
           <h6 className=" fw-lighter">Register</h6>
-          <h6 className=" fw-lighter">Shopping</h6> 
+          <h6 className=" fw-lighter">Shopping</h6>
           <h6 className=" fw-lighter">Contact</h6>
           <h6 className=" fw-lighter">CheckOut</h6>
         </div>

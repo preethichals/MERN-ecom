@@ -232,7 +232,7 @@ function Mplan() {
                             letterSpacing: "0.2em",
                           }}
                           onClick={() => {
-                            setCart([...cart, plan]);
+                            setCart([...cart, p]);
                             toast.success("Item Added to Cart");
                           }}
                         >

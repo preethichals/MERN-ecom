@@ -1,11 +1,10 @@
 import React from "react";
 import { toast } from "react-toastify";
-import {  NavLink,  } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { GrCart } from "react-icons/gr";
 
 import { useAuth } from "../../context/auth";
 import { useCart } from "../../context/cart.js";
-
 
 function Header() {
   const [auth, setAuth] = useAuth();
@@ -24,21 +23,31 @@ function Header() {
   };
   return (
     <>
-    <div className="bg-black ">
-      <p className="container-fluid mb-0 text-white fw-lighter">
-        Free shipping for standard order over 500
-      </p>
-    </div>
+      <div className="bg-black ">
+        <p className="container-fluid mb-0 text-white fw-lighter">
+          Free shipping for standard order over 500
+        </p>
+      </div>
       {/* <div className="bg-dark text-light px-4 py-1 fw-lighter">
         <span style={{ letterSpacing: "0.2em" }}>
           Send Your Query ( Mail-Id : onlineshop@support.com ){" "}
         </span>
         <span className="float-end">Call us : +012-3456789</span>
       </div> */}
-      <nav className="container-fluid navbar navbar-expand-md shadow sticky-top bg-nav opacity-75" style={{backgroundColor:"#fdefef"}}>
+      <nav
+        className="container-fluid navbar navbar-expand-md shadow sticky-top bg-nav opacity-75"
+        style={{ backgroundColor: "#fdefef" }}
+      >
         <div className="container text-uppercase fs-6 lh-lg ">
           {/* Logo */}
-          <h1 to={'/'}  className="text-capitalize logo-cursive my-auto rounded-3 text-decoration-none" style={{color:"#f9487b"}}>  <GrCart /> Online Shop</h1>
+          <h1
+            to={"/"}
+            className="text-capitalize logo-cursive my-auto rounded-3 text-decoration-none"
+            style={{ color: "#f9487b" }}
+          >
+            {" "}
+            <GrCart /> Online Shop
+          </h1>
           <button
             className="navbar-toggler"
             type="button"
@@ -59,9 +68,8 @@ function Header() {
                 Home
               </NavLink>
               <NavLink to="/plan" className="nav-link">
-                    Shop
-                  </NavLink>
-             
+                Shop
+              </NavLink>
 
               {!auth.user ? (
                 <>
@@ -74,7 +82,6 @@ function Header() {
                 </>
               ) : (
                 <>
-                 
                   <NavLink
                     to={`/dashboard/${
                       auth?.user?.role === 1 ? "admin" : "user"

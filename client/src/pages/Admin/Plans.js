@@ -12,7 +12,9 @@ const Plans = () => {
   //getallplans
   const getAllPlans = async () => {
     try {
-      const { data } = await axios.get("https://ecomm-d72q.onrender.com/api/v1/plan/get-plan");
+      const { data } = await axios.get(
+        "https://ecomm-d72q.onrender.com/api/v1/plan/get-plan"
+      );
       setPlan(data.plan);
     } catch (error) {
       console.log(error);
@@ -31,44 +33,43 @@ const Plans = () => {
           <AdminMenu />
         </div>
         <div className="col-md-9 ">
-          <h1 className="text-center">All PRODUCT</h1>
+          <h1 className="text-center">All PRODUCTS</h1>
           <div className="d-flex flex-wrap ">
-            {plan?.map((p,index) => (
+            {plan?.map((p, index) => (
               <Link
                 key={index}
                 to={`/dashboard/admin/plan/${p.slug}`}
-                className="col-sm-1 col-md-1 card m-1 p-1 rounded-2 text-center text-decoration-none"style={{ width: "15rem", height: "auto" }}
-          
+                className="col-sm-1 col-md-1 card m-1 p-1 rounded-2 text-center text-decoration-none"
+                style={{ width: "15rem", height: "auto" }}
               >
                 <div>
-                <img
-                        src={`https://ecomm-d72q.onrender.com/api/v1/plan/plan-sampleimage/${p._id}`}
-                        alt={p.name}
-                        className=" p-1 rounded-0 img-fluid"
-                        style={{ width: "22rem", height: "17rem" }}
-                      />
+                  <img
+                    src={`https://ecomm-d72q.onrender.com/api/v1/plan/plan-sampleimage/${p._id}`}
+                    alt={p.name}
+                    className=" p-1 rounded-0 img-fluid"
+                    style={{ width: "22rem", height: "17rem" }}
+                  />
                   <div className="card-body">
                     <h5 className="card-title">{p.name}</h5>
-                    <p className="card-text">{p.description.substring(0,34)}..</p>
-                    
+                    <p className="card-text">
+                      {p.description.substring(0, 34)}..
+                    </p>
                   </div>
 
                   <button
-                          className="detail btn my-2 mx-3 text-white"
-                        
-                          style={{
-                            backgroundColor: "#373132",
-                            letterSpacing: "0.1em",
-                          }} 
-                        >
-                          More Options
-                        </button>
+                    className="detail btn my-2 mx-3 text-white"
+                    style={{
+                      backgroundColor: "#373132",
+                      letterSpacing: "0.1em",
+                    }}
+                  >
+                    More Options
+                  </button>
                 </div>
               </Link>
             ))}
           </div>
         </div>
-        
       </div>
     </Layout>
   );
