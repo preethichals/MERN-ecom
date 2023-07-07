@@ -11,16 +11,22 @@ import { GrCart } from "react-icons/gr";
 
 function PlanDetail() {
    const similarProd = [{
-    "name":" Beigh Top",
-    "description":"Description about the product",
-    "img":"bright-positive.jpg",
+    "name":" Excepteur",
+    "description":"Sed blandit libero volutpat sed. Porttitor massa id neque aliquam",
+    "img":"kids-tops.jpg",
    },{
-    "name":"Pink Top",
-    "description":"Description about the product",
-    "img":"kids.jpg",
+    "name":"Imperdiet",
+    "description":"Diam vulputate ut pharetra sit amet. Accumsan in nisl nisi scelerisque eu ultrices",
+    "img":"cosmetics.jpg",
    },
    {
-    "img":"mens-tshirt-01.jpg"
+    "name":"Orcieu",
+    "description":"Amet aliquam id diam maecenas ultricies. Feugiat in fermentum posuere",
+    "img":"kids-boy.jpg",
+   },{
+    "name":"Quam",
+    "description":"Porta nibh venenatis cras sed felis eget. Sodales neque sodales ",
+    "img":"womens-handbag.jpg",
    }
   ]
     const params = useParams()
@@ -168,15 +174,15 @@ Machine Wash</p>
                     >
                       
                       <img
-                       src={require("./../Images/kids-boy.jpg")}
+                       src={require(`./../Images/${p.img}`)}
                         alt={p.name}
                         className=" p-1 rounded-0 img-fluid"
                         style={{ width: "15rem", height: "17rem" }}
                       />
 
                       <h6
-                        className=" text-capitalize fw-semibold px-2 pt-2"
-                        style={{ letterSpacing: "0.2em", color: "#47856c" }}
+                        className=" text-uppercase fw-semibold px-2 pt-2"
+                        style={{ letterSpacing: "0.2em", color: "#" }}
                       >
                         {p.name}
                       </h6>
@@ -185,7 +191,7 @@ Machine Wash</p>
                         className=" fs-6 text-capitalize fw-medium px-2 py-1border-bottom border-1"
                         style={{ letterSpacing: "0.2em", color: "#47856c" }}
                       >
-                        {p.description}..
+                        {p.description.substring(0,35)}..
                       </h6>
                       
                       

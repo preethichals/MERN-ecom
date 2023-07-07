@@ -152,9 +152,9 @@ const CartPage = () => {
           </div>
           <div className="col-md-3 text-center">
             <h4>Cart Summary</h4>
-            <h5 className="p-2 bg-body-secondary fw-light">
+            <h6 className="p-2 bg-body-secondary fw-light">
               Total | Check-Out | Payment
-            </h5>
+            </h6>
             <p className=" m-auto fs-4 my-2" style={{ letterSpacing: "0.2em" }}>
               Total : {totalPrice()}
             </p>
@@ -193,7 +193,7 @@ const CartPage = () => {
                   />
 
                   <button
-                    className="btn btn-primary"
+                    className="btn btn-primary mb-3"
                     onClick={handlePayment}
                     disabled={loading || !instance || !auth?.user?.address}
                   >

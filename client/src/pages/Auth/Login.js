@@ -45,7 +45,7 @@ function Login() {
         className="bg-login d-flex flex-column justify-content-center align-items-center text-center"
         style={{ minHeight: "70vh" }}
       >
-        <div className="bg-light rounded-3 p-5">
+        <div className="bg-light rounded-3 px-4 pt-5">
           <h2
             className="fs-2 text-uppercase text-white bg-dark px-4 py-2 rounded-3 fw-lighter"
             style={{ letterSpacing: "0.2em" }}
@@ -79,12 +79,14 @@ function Login() {
 
             <button
               type="submit"
-              className="btn px-3 py-2 fw-bolder text-uppercase text-light"
+              className="btn px-3 py-2 mb-2 fw-bolder text-uppercase text-light"
               style={{ backgroundColor: "#b30000", letterSpacing: "0.2em" }}
             >
               Login
             </button>
           </form>
+          <p style={{letterSpacing: "0.1em"}}> <span className="fw-bold">FOR TESTING</span> <br/>  'user@123' as email<br/>'user@123' as password</p>
+
         </div>
       </div>
     </Layout>

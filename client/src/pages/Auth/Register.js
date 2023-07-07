@@ -106,7 +106,7 @@ function Register() {
               onChange={(e) => setAnswer(e.target.value)}
               className="form-control"
               id="formAddress"
-              placeholder="Enter your Address"
+              placeholder="Enter your City"
               required
             />
           </div>
