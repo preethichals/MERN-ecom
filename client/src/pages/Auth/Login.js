@@ -59,7 +59,7 @@ function Login() {
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="form-control bg-success-subtle"
+                className="form-control bg-success-subtle text-center"
                 id="formEmail"
                 placeholder="Enter Your Email-Id"
                 required
@@ -70,7 +70,7 @@ function Login() {
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
-                className="form-control bg-success-subtle"
+                className="form-control bg-success-subtle text-center"
                 id="formPassword"
                 placeholder="Enter Your Password"
                 required
