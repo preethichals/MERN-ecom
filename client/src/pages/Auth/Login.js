@@ -61,7 +61,7 @@ function Login() {
                 onChange={(e) => setEmail(e.target.value)}
                 className="form-control bg-success-subtle"
                 id="formEmail"
-                placeholder="Enter 'admin' to login as Admin"
+                placeholder="Enter Your Email-Id"
                 required
               />
             </div>
@@ -72,7 +72,7 @@ function Login() {
                 value={password}
                 className="form-control bg-success-subtle"
                 id="formPassword"
-                placeholder="Enter 'admin' as Password"
+                placeholder="Enter Your Password"
                 required
               />
             </div>
