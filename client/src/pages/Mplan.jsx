@@ -1,5 +1,7 @@
 import axios from "axios";
 import { Checkbox, Radio } from "antd";
+import { GoSearch } from "react-icons/go"
+import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -8,10 +10,12 @@ import { useCart } from "../context/cart";
 import { toast } from "react-toastify";
 import { GrCart } from "react-icons/gr";
 import {Prices} from "../components/Prices"
+import InputGroup from 'react-bootstrap/InputGroup';
 
 function Mplan() {
 
   const navigate = useNavigate();
+  
   const [plan, setPlan] = useState([]);
   const [checked, setChecked] = useState([]);
     // eslint-disable-next-line
@@ -178,8 +182,17 @@ function Mplan() {
               RESET FILTERS
             </button>
           </div>
-          {/* All meal Plan list */}
+          {/* All Product List */}
           <div className="col-md-9 my-5" id="plan" style={{backgroundColor:"#f0dbda"}}>
+            <InputGroup className="mb-3">
+        <InputGroup.Text id="basic-addon1"><h4><GoSearch /></h4></InputGroup.Text>
+        <Form.Control
+          placeholder="Search for Products..."
+          aria-label="Search"
+          aria-describedby="basic-addon1"
+        />
+      </InputGroup>
+            
             {isLoading ? (
               <span className="fs-5">Loading...</span>
             ) : (
@@ -190,7 +203,7 @@ function Mplan() {
                     <div
                       key={index}
                       navigate={`/plan/${p.slug}`}
-                      className="col-sm-1 col-md-1 card m-1 p-1 rounded-2 text-center "
+                      className="col-sm-1 col-md-1 card m-1 p-1 rounded-2 text-center"
                       style={{ width: "15rem", height: "auto" }}
                     >
                       

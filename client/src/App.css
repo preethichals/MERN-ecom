@@ -137,12 +137,25 @@ nav a:hover {
   border: 1px solid black;
   border-radius: 0.5rem;
   font-weight: 400;
-  cursor: pointer;
   color: #fff;
   width: 70%;
 }
-.heading:hover{
-  background-color:transparent;
+
+.view {
+  text-transform: uppercase;
+  margin: 1rem auto 0 auto;
+  padding: 0.4rem;
+  letter-spacing: 0.2rem;
+  display: block;
+  border: 1px solid rgba(48, 48, 48, 0.56);
   border-radius: 0.5rem;
-  color: #343030;
+  font-weight: 400;
+  cursor: pointer;
+  color: #3e3e3e;
+  width: 30%;
+}
+.view:hover{
+  background-color:#343030;
+  border-radius: 0.5rem;
+  color: #fafafa;
 }

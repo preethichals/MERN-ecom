@@ -76,6 +76,7 @@ function PlanDetail() {
           </nav>
     
     <div className='row container mt-1' style={{backgroundColor:"#f0dbda"}}>
+      
         <div className='col-md-6 my-2'>
             <img className='img-thumbnail rounded-3 mx-auto mt-4 border border-1 bg-light p-2' src={`https://ecomm-d72q.onrender.com/api/v1/plan/plan-sampleimage/${plan._id}`} alt={plan.name}/>
 

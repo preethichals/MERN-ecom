@@ -71,6 +71,9 @@ router.get("/plan-category/:slug", planCategoryController);
 //Filter Products
 router.get("/plan-filter", productFiltersController) 
 
+//Search Products
+router.get("/plan-search", productSearch)
+
 //similar product
 router.post("/related-product/:pid/:cid", realtedProductController);
 

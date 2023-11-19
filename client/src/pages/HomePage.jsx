@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ImageSlider from "../components/ImageSlider";
 
 // import { useNavigate } from "react-router-dom";
@@ -137,11 +138,13 @@ const kidsProd = [{
                     />
                     </div>
                     <h6 className="heading">{m.title}</h6>
+                    
                   </div>
                 )
                 })}
              
               </div>
+              <Link to="/plan" className="view">View More</Link>
             </div>
           </div>
         </div>
@@ -171,12 +174,13 @@ const kidsProd = [{
                       alt=""
                     />
                     </div>
-                    <h6 className="heading">{m.title}</h6>
+                    <Link to="/plan"><h6 className="heading">{m.title}</h6></Link>
                   </div>
                 )
                 })}
             
               </div>
+              <Link to="/plan" className="view">View More</Link>
             </div>
           </div>
           <div
@@ -241,6 +245,7 @@ const kidsProd = [{
                 })}
                  
               </div>
+              <Link to="/plan" className="view">View More</Link>
             </div>
           </div>
         </div>

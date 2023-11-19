@@ -284,6 +284,15 @@ export const planCategoryController = async (req, res) => {
   }
 };
 
+//Search 
+export const productSearch = async (res,req) => {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
+
 // filters
 export const productFiltersController = async (req, res) => {
   try {
